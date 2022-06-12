@@ -7,6 +7,7 @@ Comment.init(
     {
         id: {
           type: DataTypes.INTEGER,
+          allowNull:false, 
           primaryKey: true,
           autoIncrement: true
         },
@@ -27,10 +28,9 @@ Comment.init(
           }
         }, 
         comment_text : {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
-            
-        validate: {
+            validate: {
           // this means the text must be at least one character long
           len: [1]
         }
